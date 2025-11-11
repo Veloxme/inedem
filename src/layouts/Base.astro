@@ -1,0 +1,33 @@
+---
+import "../styles/global.css";
+const {
+  title = "INÉDEM – Educación Empresarial",
+  description = "Formación ejecutiva y empresarial con programas prácticos orientados a resultados.",
+} = Astro.props;
+---
+
+<html
+  lang='es'
+  class='bg-inedem-light text-slate-900'>
+  <head>
+    <meta charset='utf-8' />
+    <meta
+      name='viewport'
+      content='width=device-width'
+    />
+    <meta
+      name='description'
+      content={description}
+    />
+    <link
+      rel='stylesheet'
+      href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css'
+    />
+    <title>{title}</title>
+  </head>
+  <body class='min-h-screen flex flex-col'>
+    <slot name='nav' />
+    <main class='flex-1'>{/* contenido de la página */}<slot /></main>
+    <slot name='footer' />
+  </body>
+</html>

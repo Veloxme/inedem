@@ -1,0 +1,79 @@
+---
+const TITLE = "Nuestros Servicios";
+const DESCRIPTION =
+  "Soluciones educativas integrales adaptadas a las necesidades de tu organización";
+const CARDS = [
+  {
+    icon: "📚",
+    name: "Capacitación In-Company",
+    description:
+      "Programas personalizados impartidos directamente en las instalaciones de tu empresa.",
+  },
+  {
+    icon: "💼",
+    name: "Consultoría Empresarial",
+    description:
+      "Asesoramiento estratégico para optimizar procesos y mejorar la productividad.",
+  },
+  {
+    icon: "🎯",
+    name: "Desarrollo de Liderazgo",
+    description:
+      "Formación especializada para fortalecer las habilidades de liderazgo en tu equipo.",
+  },
+  {
+    icon: "🌐",
+    name: "Cursos Online",
+    description:
+      " Plataforma digital con contenido accesible 24/7 para tu equipo de trabajo.",
+  },
+  {
+    icon: "📊",
+    name: "Evaluación y Certificación",
+    description:
+      "Validación de competencias y certificación oficial de conocimientos adquiridos.",
+  },
+  {
+    icon: "🤝",
+    name: "Coaching Ejecutivo",
+    description:
+      "Acompañamiento personalizado para directivos y gerentes de alto nivel.",
+  },
+];
+---
+
+<section
+  id='servicios'
+  class='py-20 px-4 sm:px-6 lg:px-8 bg-white'>
+  <div class='max-w-7xl mx-auto'>
+    <div class='text-center mb-16'>
+      <h2
+        class='text-3xl sm:text-4xl lg:text-5xl font-bold text-slate-900 mb-4'>
+        {TITLE}
+      </h2>
+      <p class='text-lg text-slate-600 max-w-2xl mx-auto'>
+        {DESCRIPTION}
+      </p>
+    </div>
+
+    <div class='grid md:grid-cols-2 lg:grid-cols-3 gap-8'>
+      {
+        CARDS.map((l) => (
+          <div class='bg-slate-50 p-8 rounded-2xl hover:shadow-xl transition-all duration-300 border-2 border-transparent hover:border-slate-900'>
+            <div class='w-16 h-16 bg-slate-900 rounded-xl flex items-center justify-center text-3xl mb-6'>
+              {l.icon}
+            </div>
+            <h3 class='text-2xl font-bold text-slate-900 mb-4'>{l.name}</h3>
+            <p class='text-slate-600 mb-6'>{l.description}</p>
+            <a
+              href='#contacto'
+              class='text-slate-900 font-semibold inline-flex items-center gap-2 hover:gap-3 transition-all'>
+              Más información
+              <span>→</span>
+            </a>
+          </div>
+        ))
+      }
+    </div>
+  </div>
+</section>

@@ -1,0 +1,17 @@
+@import "tailwindcss";
+
+/* @tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Tipografías y ajustes globales */
+:root {
+    --radius: 1.25rem;
+}
+
+html,
+body {
+    scroll-behavior: smooth;
+}
+
+*/

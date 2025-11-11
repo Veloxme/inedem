@@ -1,0 +1,51 @@
+---
+const UBICATION = "Mazatlán, Sinaloa, México";
+const EMAIL = "contacto.inedem@gmail.com";
+const TEL = "+52 (669) 123-4567";
+---
+
+<section
+  id='contacto'
+  class='py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-slate-900 to-slate-800 text-white'>
+  <div class='max-w-4xl mx-auto text-center'>
+    <h2 class='text-3xl sm:text-4xl lg:text-5xl font-bold mb-6'>
+      ¿Listo para impulsar tu empresa?
+    </h2>
+    <p class='text-xl text-slate-300 mb-10'>
+      Contáctanos y descubre cómo nuestros programas pueden transformar a tu
+      equipo de trabajo
+    </p>
+
+    <div
+      class='flex flex-col sm:flex-row gap-4 justify-center items-center mb-12'>
+      <a
+        href=`mailto:${EMAIL}`
+        class='w-full sm:w-auto bg-white text-slate-900 px-10 py-4 rounded-lg font-semibold hover:bg-slate-100 transition-all shadow-xl'>
+        Enviar correo
+      </a>
+      <a
+        href=`tel:${TEL}`
+        class='w-full sm:w-auto border-2 border-white text-white px-10 py-4 rounded-lg font-semibold hover:bg-white hover:text-slate-900 transition-all'>
+        Llamar ahora
+      </a>
+    </div>
+
+    <div class='grid md:grid-cols-3 gap-8 text-left'>
+      <div>
+        <div class='text-3xl mb-3'>📍</div>
+        <h3 class='font-bold mb-2'>Ubicación</h3>
+        <p class='text-slate-300'>{UBICATION}</p>
+      </div>
+      <div>
+        <div class='text-3xl mb-3'>📧</div>
+        <h3 class='font-bold mb-2'>Email</h3>
+        <p class='text-slate-300'>{EMAIL}</p>
+      </div>
+      <div>
+        <div class='text-3xl mb-3'>📱</div>
+        <h3 class='font-bold mb-2'>Teléfono</h3>
+        <p class='text-slate-300'>{TEL}</p>
+      </div>
+    </div>
+  </div>
+</section>

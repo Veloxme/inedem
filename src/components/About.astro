@@ -1,0 +1,65 @@
+---
+const links = [
+  {
+    name: "Metodología Práctica",
+    description:
+      "Aplicamos casos reales y ejercicios prácticos para garantizar el aprendizaje efectivo.",
+  },
+  {
+    name: "Instructores Expertos",
+    description:
+      "Profesionales con amplia experiencia empresarial y académica de alto nivel.",
+  },
+  {
+    name: "Certificación Oficial",
+    description:
+      "Certificados con validez oficial y reconocimiento en el sector empresarial.",
+  },
+];
+---
+
+<section
+  id='nosotros'
+  class='py-20 px-4 sm:px-6 lg:px-8 bg-white'>
+  <div class='max-w-7xl mx-auto'>
+    <div class='grid lg:grid-cols-2 gap-12 items-center'>
+      <div>
+        <h2
+          class='text-3xl sm:text-4xl lg:text-5xl font-bold text-slate-900 mb-6'>
+          Impulsamos el crecimiento empresarial
+        </h2>
+        <p class='text-lg text-slate-600 mb-8'>
+          Con más de 15 años de experiencia, INEDEM se ha consolidado como un
+          referente en educación corporativa, ofreciendo soluciones de
+          capacitación que generan resultados medibles en las organizaciones.
+        </p>
+
+        <div class='space-y-6'>
+          {
+            links.map((l) => (
+              <div class='flex gap-4'>
+                <div class='flex-shrink-0'>
+                  <div class='w-12 h-12 bg-slate-900 rounded-lg flex items-center justify-center text-white text-xl'>
+                    ✓
+                  </div>
+                </div>
+                <div>
+                  <h3 class='text-xl font-bold text-slate-900 mb-2'>
+                    {l.name}
+                  </h3>
+                  <p class='text-slate-600'>{l.description}</p>
+                </div>
+              </div>
+            ))
+          }
+        </div>
+      </div>
+
+      <img
+        src='https://images.unsplash.com/photo-1523287562758-66c7fc58967f?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&fm=jpg&q=60&w=3000'
+        alt='INEDEM'
+        class='max-w-full h-auto rounded-2xl'
+      />
+    </div>
+  </div>
+</section>

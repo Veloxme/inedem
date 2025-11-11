@@ -1,0 +1,78 @@
+---
+const CARDS = [
+  {
+    icon: "📈",
+    name: "Administración Estratégica",
+    description:
+      "Herramientas y metodologías para la toma de decisiones estratégicas efectivas.",
+    stacks: [
+      "Planificación estratégica",
+      "Análisis financiero",
+      "Gestión de proyectos",
+    ],
+  },
+  {
+    icon: "👥",
+    name: "Gestión del Talento Humano",
+    description:
+      "Estrategias modernas para atraer, desarrollar y retener el mejor talento.",
+    stacks: [
+      "Reclutamiento y selección",
+      "Evaluación de desempeño",
+      "Desarrollo organizacional",
+    ],
+  },
+  {
+    icon: "🎯",
+    name: "Marketing y Ventas",
+    description:
+      "Técnicas avanzadas para incrementar la competitividad comercial de tu empresa.",
+    stacks: [
+      "Marketing digital",
+      "Estrategias de ventas",
+      "Experiencia del cliente",
+    ],
+  },
+];
+---
+
+<section
+  id='programas'
+  class='py-20 px-4 sm:px-6 lg:px-8 bg-slate-900 text-white'>
+  <div class='max-w-7xl mx-auto'>
+    <div class='text-center mb-16'>
+      <h2 class='text-3xl sm:text-4xl lg:text-5xl font-bold mb-4'>
+        Programas Destacados
+      </h2>
+      <p class='text-lg text-slate-300 max-w-2xl mx-auto'>
+        Formación especializada en las áreas más demandadas del sector
+        empresarial
+      </p>
+    </div>
+
+    <div class='grid md:grid-cols-3 gap-8'>
+      {
+        CARDS.map((l) => (
+          <div class='bg-white text-slate-900 p-8 rounded-2xl hover:transform hover:scale-105 transition-all duration-300'>
+            <div class='text-5xl mb-6'>{l.icon}</div>
+            <h3 class='text-2xl font-bold mb-4'>{l.name}</h3>
+            <p class='text-slate-600 mb-6'>{l.description}</p>
+            <ul class='space-y-2 mb-6 text-slate-700'>
+              {l.stacks.map((s) => (
+                <li class='flex items-start gap-2'>
+                  <span class='text-slate-900 font-bold'>✓</span>
+                  <span>{s}</span>
+                </li>
+              ))}
+            </ul>
+            <a
+              href='#contacto'
+              class='inline-block w-full text-center bg-slate-900 text-white px-6 py-3 rounded-lg font-semibold hover:bg-slate-800 transition-all'>
+              Solicitar programa
+            </a>
+          </div>
+        ))
+      }
+    </div>
+  </div>
+</section>
