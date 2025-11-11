@@ -1,9 +1,14 @@
+---
+import { Image } from "astro:assets";
+import logo from "/src/assets/Logo.webp";
+---
+
 <footer class='bg-slate-950 text-slate-400 py-12 px-4 sm:px-6 lg:px-8'>
   <div class='max-w-7xl mx-auto text-center'>
-    <img
-      src='../assets/Logo.webp'
+    <Image
+      src={logo}
       alt='INEDEM'
-      class='h-16 mx-auto mb-4 opacity-70 bg-white p-2 rounded-lg'
+      class='h-16 w-auto mx-auto mb-4 opacity-70 bg-white p-2 rounded-lg'
     />
     <p class='font-semibold text-slate-300 text-lg mb-2'>INEDEM</p>
     <p class='mb-6'>Instituto Educativo Empresarial</p>

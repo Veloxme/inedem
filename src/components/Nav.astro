@@ -5,6 +5,8 @@ const links = [
   { name: "Nosotros", href: "#nosotros" },
   // { name: "Contáctanos", href: "#contacto" },
 ];
+import { Image } from "astro:assets";
+import logo from "/src/assets/Logo.webp";
 ---
 
 <nav
@@ -13,8 +15,8 @@ const links = [
   <div class='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
     <div class='flex justify-between items-center h-20'>
       <div class='flex items-center'>
-        <img
-          src='../assets/Logo.webp'
+        <Image
+          src={logo}
           alt='INEDEM'
           class='h-12 w-auto'
         />
